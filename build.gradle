@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.testng:testng:7.1.0'
+    implementation group: 'io.qameta.allure', name: 'allure-selenide', version: '2.13.5'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '4.3.3'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testImplementation 'io.rest-assured:json-path:4.3.3'
+}
+
+wrapper {
+    gradleVersion = '5.6.2'
+}
